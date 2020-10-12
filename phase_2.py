@@ -20,14 +20,8 @@ def print_result(annotations):
     score = annotations.document_sentiment.score
     magnitude = annotations.document_sentiment.magnitude
 
-    for index, sentence in enumerate(annotations.sentences):
-        sentence_sentiment = sentence.sentiment.score
-        print(
-            "Sentence {} has a sentiment score of {}".format(index, sentence_sentiment)
-        )
-
     print(
-        "Overall Sentiment: score of {} with magnitude of {}".format(score, magnitude)
+        "Overall Sentiment: score of {} with magnitude of {} for this hashtag".format(score, magnitude)
     )
     return 0
 
